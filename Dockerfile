@@ -6,7 +6,7 @@ LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
 
 RUN apk update \
     && apk add  --no-cache git mysql-client curl openssh-client icu libpng libjpeg-turbo \
-    && apk add --no-cache --virtual build-dependencies libmcrypt libmcrypt-dev icu-dev \
+    && apk add --no-cache --virtual build-dependencies icu-dev \
     libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf \
     && docker-php-source extract \
     && pecl install redis \
