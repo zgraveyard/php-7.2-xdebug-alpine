@@ -3,7 +3,8 @@
 [![](https://images.microbadger.com/badges/version/zaherg/php-7.2-xdebug-alpine.svg)](https://microbadger.com/images/zaherg/php-7.2-xdebug-alpine "Get your own version badge on microbadger.com")
 
 
-# Image description
+## Image description
+
 This image contain php-7.2 based on alpine with xDebug, Redis & GD enabled and Composer already installed
 
 ## Installed modules information
