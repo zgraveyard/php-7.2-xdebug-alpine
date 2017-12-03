@@ -1,14 +1,18 @@
 FROM php:7.2-fpm-alpine
 
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
-      Description="Lightweight container with PHP-FPM 7.2 & xDebug based on Alpine Linux." \
-      Date="2-12-2017"
+      Description="Lightweight container with PHP-FPM 7.2 with xDebug and redis based on Alpine Linux." \
+      Date="3-12-2017"
 
 RUN apk update \
-    && apk add  --no-cache git mysql-client curl openssh-client \
+    && apk add  --no-cache git mysql-client curl openssh-client icu libpng libjpeg-turbo \
     && apk add --no-cache --virtual build-dependencies libmcrypt libmcrypt-dev icu-dev \
     libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf \
-    && docker-php-ext-install pdo_mysql zip \
+    && docker-php-source extract \
+    && pecl install redis \
+    && docker-php-ext-enable redis \
+    && docker-php-source delete \
+    && docker-php-ext-install pdo_mysql intl zip gd \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && mkdir /src && cd /src && git clone https://github.com/xdebug/xdebug.git \
     && cd xdebug \

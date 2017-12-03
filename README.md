@@ -3,9 +3,12 @@
 [![](https://images.microbadger.com/badges/version/zaherg/php-7.2-xdebug-alpine.svg)](https://microbadger.com/images/zaherg/php-7.2-xdebug-alpine "Get your own version badge on microbadger.com")
 
 
-This image contain php-7.2 based on alpine with xDebug enabled and Composer installed
+# Image description
+This image contain php-7.2 based on alpine with xDebug, Redis & GD enabled and Composer already installed
 
-Also it has the following modules:
+## Installed modules information
+
+It has the following modules:
 
 [PHP Modules]
 
@@ -17,8 +20,10 @@ Also it has the following modules:
 1. fileinfo
 1. filter
 1. ftp
+1. gd
 1. hash
 1. iconv
+1. intl
 1. json
 1. libxml
 1. mbstring
@@ -31,6 +36,7 @@ Also it has the following modules:
 1. Phar
 1. posix
 1. readline
+1. redis
 1. Reflection
 1. session
 1. SimpleXML
@@ -48,3 +54,34 @@ Also it has the following modules:
 [Zend Modules]
 
 1. Xdebug
+
+## GD information
+
+```
+array(12) {
+  'GD Version' =>
+  string(26) "bundled (2.1.0 compatible)"
+  'FreeType Support' =>
+  bool(false)
+  'GIF Read Support' =>
+  bool(true)
+  'GIF Create Support' =>
+  bool(true)
+  'JPEG Support' =>
+  bool(false)
+  'PNG Support' =>
+  bool(true)
+  'WBMP Support' =>
+  bool(true)
+  'XPM Support' =>
+  bool(false)
+  'XBM Support' =>
+  bool(true)
+  'WebP Support' =>
+  bool(false)
+  'BMP Support' =>
+  bool(true)
+  'JIS-mapped Japanese Font Support' =>
+  bool(false)
+}
+```
