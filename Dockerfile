@@ -1,8 +1,13 @@
 FROM php:7.2-fpm-alpine
 
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
-      Description="Lightweight container with PHP-FPM 7.2 with xDebug and redis based on Alpine Linux." \
-      Date="3-12-2017"
+      Description="Lightweight php 7.2 container based on alpine with xDebug enabled & composer installed." \
+      org.label-schema.name="php-7.2-xdebug-alpine" \
+      org.label-schema.description="Lightweight php 7.2 container based on alpine with xDebug enabled & composer installed." \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/linuxjuggler/php-7.2-xdebug-alpine.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0.0"
 
 RUN apk update \
     && apk add  --no-cache git mysql-client curl openssh-client icu libpng libjpeg-turbo \
