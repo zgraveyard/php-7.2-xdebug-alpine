@@ -1,5 +1,8 @@
 FROM php:7.2-fpm-alpine
 
+ARG BUILD_DATE
+ARG VCS_REF
+
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
       Description="Lightweight php 7.2 container based on alpine with xDebug enabled & composer installed." \
       org.label-schema.name="php-7.2-xdebug-alpine" \
