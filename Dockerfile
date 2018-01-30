@@ -21,7 +21,7 @@ RUN apk update \
     && pecl install redis \
     && docker-php-ext-enable redis \
     && docker-php-source delete \
-    && docker-php-ext-install pdo_mysql intl zip gd \
+    && docker-php-ext-install pdo_mysql pdo_pgsql intl zip gd \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && mkdir /src && cd /src && git clone https://github.com/xdebug/xdebug.git \
     && cd xdebug \
