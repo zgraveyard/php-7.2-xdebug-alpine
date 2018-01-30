@@ -27,6 +27,8 @@ It has the following modules:
 1. libxml
 1. mbstring
 1. mysqlnd
+1. pdo_pgsql
+1. pgsql
 1. openssl
 1. pcre
 1. PDO

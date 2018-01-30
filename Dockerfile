@@ -15,13 +15,14 @@ LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
 
 RUN apk update \
     && apk add  --no-cache git mysql-client curl openssh-client icu libpng libjpeg-turbo \
-    && apk add --no-cache --virtual build-dependencies icu-dev \
+    && apk add --no-cache --virtual build-dependencies icu-dev postgresql-dev \
     libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf \
     && docker-php-source extract \
     && pecl install redis \
     && docker-php-ext-enable redis \
     && docker-php-source delete \
-    && docker-php-ext-install pdo_mysql pdo_pgsql intl zip gd \
+    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pgsql pdo_mysql pdo_pgsql intl zip gd \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && mkdir /src && cd /src && git clone https://github.com/xdebug/xdebug.git \
     && cd xdebug \
