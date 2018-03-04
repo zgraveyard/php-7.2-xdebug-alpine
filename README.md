@@ -3,7 +3,14 @@
 
 ## Image description
 
-This image contain php-7.2 based on alpine with xDebug, Redis & GD enabled and Composer already installed
+This image contain php-7.2 based on alpine with xDebug, MySQL, PostgreSQL, Redis & GD enabled and Composer already installed
+
+```
+PHP 7.2.2 (cli) (built: Feb  6 2018 23:24:31) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans
+```
 
 ## Installed modules information
 
@@ -11,46 +18,47 @@ It has the following modules:
 
 [PHP Modules]
 
-1. Core
-1. ctype
-1. curl
-1. date
-1. dom
-1. fileinfo
-1. filter
-1. ftp
-1. gd
-1. hash
-1. iconv
-1. intl
-1. json
-1. libxml
-1. mbstring
-1. mysqlnd
-1. pdo_pgsql
-1. pgsql
-1. openssl
-1. pcre
-1. PDO
-1. pdo_mysql
-1. pdo_sqlite
-1. Phar
-1. posix
-1. readline
-1. redis
-1. Reflection
-1. session
-1. SimpleXML
-1. SPL
-1. sqlite3
-1. standard
-1. tokenizer
-1. xdebug
-1. xml
-1. xmlreader
-1. xmlwriter
-1. zip
-1. zlib
+1. Core 
+1. ctype  
+1. curl 
+1. date 
+1. dom  
+1. fileinfo 
+1. filter 
+1. ftp  
+1. gd 
+1. hash 
+1. iconv  
+1. intl 
+1. json 
+1. libxml 
+1. mbstring 
+1. mysqlnd  
+1. openssl   
+1. pcre 
+1. PDO  
+1. pdo_mysql  
+1. pdo_pgsql  
+1. pdo_sqlite 
+1. pgsql 
+1. Phar 
+1. posix  
+1. readline 
+1. redis  
+1. Reflection 
+1. session  
+1. SimpleXML  
+1. sodium
+1. SPL  
+1. sqlite3  
+1. standard 
+1. tokenizer  
+1. xdebug 
+1. xml  
+1. xmlreader  
+1. xmlwriter  
+1. zip  
+1. zlib 
 
 [Zend Modules]
 
