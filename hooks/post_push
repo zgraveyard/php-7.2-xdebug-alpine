@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# $IMAGE_NAME var is injected into the build so the tag is correct.
-
-echo "Post push hook running"
-
-docker tag $IMAGE_NAME $DOCKER_REPO:$SOURCE_COMMIT
-
-docker push $DOCKER_REPO:$SOURCE_COMMIT             
