@@ -5,7 +5,7 @@
 
 This image contain php-7.2 based on alpine with xDebug, MySQL, PostgreSQL, Redis & GD enabled and Composer already installed
 
-## Run the image:
+## Runing the image:
 
 By default xdebug is enabled, to disable it you need to create a `.env` file which should contain the following variables, but remember to change the value based one what you want to achieve:
 
