@@ -5,16 +5,9 @@
 
 This image contain php-7.2 based on alpine with xDebug, MySQL, PostgreSQL, Redis & GD enabled and Composer already installed
 
-```
-PHP 7.2.2 (cli) (built: Feb  6 2018 23:24:31) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
-    with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans
-```
-
 ## Run the image:
 
-By default xdebug is not enabled, to enable it you need to create a `.env` file which should contain the following variables:
+By default xdebug is enabled, to disable it you need to create a `.env` file which should contain the following variables, but remember to change the value based one what you want to achieve:
 
 ```
 PHP_XDEBUG_DEFAULT_ENABLE=0
