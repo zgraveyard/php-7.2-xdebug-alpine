@@ -12,6 +12,28 @@ Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
     with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans
 ```
 
+## Run the image:
+
+By default xdebug is not enabled, to enable it you need to create a `.env` file which should contain the following variables:
+
+```
+PHP_XDEBUG_DEFAULT_ENABLE=0
+PHP_XDEBUG_REMOTE_ENABLE=0
+PHP_XDEBUG_REMOTE_HOST=127.0.0.1
+PHP_XDEBUG_REMOTE_PORT=9001
+PHP_XDEBUG_REMOTE_AUTO_START=0
+PHP_XDEBUG_REMOTE_CONNECT_BACK=0
+PHP_XDEBUG_IDEKEY=docker
+PHP_XDEBUG_PROFILER_ENABLE=0
+PHP_XDEBUG_PROFILER_OUTPUT_DIR=/tmp
+```
+
+Then run the docker and specify the env file that you have created like this
+
+```
+docker run --env-file .env -p 80:80 zaherg/php-7.2-xdebug-alpine
+```
+
 ## Installed modules information
 
 It has the following modules:
