@@ -1,4 +1,4 @@
-FROM php:7.2-fpm-alpine
+FROM php:fpm-alpine3.7
 
 ARG BUILD_DATE
 ARG VCS_REF
