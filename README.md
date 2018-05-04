@@ -82,30 +82,20 @@ It has the following modules:
 ## GD information
 
 ```
-array(12) {
-  'GD Version' =>
-  string(26) "bundled (2.1.0 compatible)"
-  'FreeType Support' =>
-  bool(false)
-  'GIF Read Support' =>
-  bool(true)
-  'GIF Create Support' =>
-  bool(true)
-  'JPEG Support' =>
-  bool(false)
-  'PNG Support' =>
-  bool(true)
-  'WBMP Support' =>
-  bool(true)
-  'XPM Support' =>
-  bool(false)
-  'XBM Support' =>
-  bool(true)
-  'WebP Support' =>
-  bool(false)
-  'BMP Support' =>
-  bool(true)
-  'JIS-mapped Japanese Font Support' =>
-  bool(false)
-}
+GD Support => enabled
+GD Version => bundled (2.1.0 compatible)
+FreeType Support => enabled
+FreeType Linkage => with freetype
+FreeType Version => 2.8.1
+GIF Read Support => enabled
+GIF Create Support => enabled
+JPEG Support => enabled
+libJPEG Version => 8
+PNG Support => enabled
+libPNG Version => 1.6.34
+WBMP Support => enabled
+XBM Support => enabled
+
+Directive => Local Value => Master Value
+gd.jpeg_ignore_warning => 1 => 1
 ```
