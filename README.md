@@ -5,6 +5,13 @@
 
 This image contain php-7.2 based on alpine with xDebug, MySQL, PostgreSQL, Redis & GD enabled and Composer already installed
 
+```
+PHP 7.2.12 (fpm-fcgi) (built: Nov 16 2018 04:05:42)
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Xdebug v2.6.1, Copyright (c) 2002-2018, by Derick Rethans
+```
+
 ## Runing the image:
 
 By default xdebug is enabled, to disable it you need to create a `.env` file which should contain the following variables, but remember to change the value based one what you want to achieve:
@@ -64,7 +71,7 @@ It has the following modules:
 1. session  
 1. SimpleXML  
 1. sodium
-1. SPL  
+1. SPL
 1. sqlite3  
 1. standard 
 1. tokenizer  
