@@ -4,6 +4,7 @@ set -e
 echo "Build hook running"
 
 TAG=$1
+TAG=${TAG:=latest}
 
 export COMMIT_HASH=`git rev-parse --short HEAD`
 
